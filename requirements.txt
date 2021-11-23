@@ -55,6 +55,7 @@ hachoir
 pybase64
 pySmartDL
 validators
+youtube_dl
 yt-dlp
 google_trans_new
 #googletrans
