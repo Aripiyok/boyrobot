@@ -16,7 +16,7 @@ def time_to_seconds(time):
     return sum(int(x) * 60 ** i for i, x in enumerate(reversed(stringt.split(':'))))
 
 
-@pgram.on_message(filters.command(['s']))
+@pgram.on_message(filters.command(['song']))
 def song(client, message):
 
     user_id = message.from_user.id 
@@ -50,9 +50,9 @@ def song(client, message):
         )
         print(str(e))
         return
-    m.edit("`Downloading Song... Please wait `")
+    m.edit("`📥 downloading file... `")
     try:
-        with youtube_dl.YoutubeDL(ydl_opts) as ydl:
+        with yt_dlp.YoutubeDL(ydl_opts) as ydl:
             info_dict = ydl.extract_info(link, download=False)
             audio_file = ydl.prepare_filename(info_dict)
             ydl.process_info(info_dict)
