@@ -1,7 +1,9 @@
 import os
 import requests
 import aiohttp
-import youtube_dl
+import yt_dlp
+import aiofiles
+
 
 from pyrogram import filters
 from EmiliaAnimeBot import pgram
@@ -9,7 +11,16 @@ from youtube_search import YoutubeSearch
 from EmiliaAnimeBot.pyroerror import capture_err
 from EmiliaAnimeBot.modules.disable import DisableAbleCommandHandler
 from EmiliaAnimeBot import dispatcher
-from yt_dlp import YoutubeDL
+
+
+ydl_opts = {
+    'format': 'best',
+    'keepvideo': True,
+    'prefer_ffmpeg': False,
+    'geo_bypass': True,
+    'outtmpl': '%(title)s.%(ext)s',
+    'quite': True
+}
 
 def time_to_seconds(time):
     stringt = str(time)
@@ -32,22 +43,17 @@ def song(client, message):
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
         link = f"https://youtube.com{results[0]['url_suffix']}"
-        #print(results)
         title = results[0]["title"][:40]       
         thumbnail = results[0]["thumbnails"][0]
         thumb_name = f'thumb{title}.jpg'
         thumb = requests.get(thumbnail, allow_redirects=True)
         open(thumb_name, 'wb').write(thumb.content)
-
-
         duration = results[0]["duration"]
         url_suffix = results[0]["url_suffix"]
         views = results[0]["views"]
 
     except Exception as e:
-        m.edit(
-            "✖️ Found Nothing. Sorry.\n\nTry another keywork or maybe spell it properly."
-        )
+        m.edit("✖️ Found Nothing. Sorry.\n\nTry another keywork or maybe spell it properly.")
         print(str(e))
         return
     m.edit("`📥 downloading file... `")
@@ -64,7 +70,7 @@ def song(client, message):
         message.reply_audio(audio_file, caption=rep, thumb=thumb_name, parse_mode='md', title=title, duration=dur)
         m.delete()
     except Exception as e:
-        m.edit('An error Occured! \nReport at @TangentChats')
+        m.edit('An error Occured! \nReport at @fl0werboy')
         print(e)
 
     try:
