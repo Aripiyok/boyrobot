@@ -9,6 +9,7 @@ from youtube_search import YoutubeSearch
 from EmiliaAnimeBot.pyroerror import capture_err
 from EmiliaAnimeBot.modules.disable import DisableAbleCommandHandler
 from EmiliaAnimeBot import dispatcher
+from yt_dlp import YoutubeDL
 
 def time_to_seconds(time):
     stringt = str(time)
