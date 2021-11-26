@@ -34,7 +34,7 @@ def song(client: Client, message: Message):
 
 
 
-    user_id = message.from_user.id 
+    user_id = message.from_user.first_name
     chat_title = message.chat.title
     user_name = message.from_user.first_name 
     rpk = "["+user_name+"](tg://user?id="+str(user_id)+")"
