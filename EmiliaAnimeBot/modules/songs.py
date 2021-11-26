@@ -4,7 +4,8 @@ import aiohttp
 import yt_dlp
 import aiofiles
 
-
+from pyrogram import Client
+from pyrogram.types import Message
 from yt_dlp import YoutubeDL
 from pyrogram import filters
 from EmiliaAnimeBot import pgram
@@ -29,7 +30,9 @@ def time_to_seconds(time):
 
 
 @pgram.on_message(filters.command(['song']))
-def song(client, message):
+def song(client: Client, message: Message):
+
+
 
     user_id = message.from_user.id 
     chat_title = message.chat.title
