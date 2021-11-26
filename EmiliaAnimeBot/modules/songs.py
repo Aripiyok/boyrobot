@@ -5,6 +5,7 @@ import yt_dlp
 import aiofiles
 
 
+from yt_dlp import YoutubeDL
 from pyrogram import filters
 from EmiliaAnimeBot import pgram
 from youtube_search import YoutubeSearch
@@ -31,6 +32,7 @@ def time_to_seconds(time):
 def song(client, message):
 
     user_id = message.from_user.id 
+    chat_title = message.chat.title
     user_name = message.from_user.first_name 
     rpk = "["+user_name+"](tg://user?id="+str(user_id)+")"
 
