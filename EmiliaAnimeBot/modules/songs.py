@@ -15,14 +15,6 @@ from EmiliaAnimeBot.modules.disable import DisableAbleCommandHandler
 from EmiliaAnimeBot import dispatcher
 
 
-ydl_opts = {
-    'format': 'best',
-    'keepvideo': True,
-    'prefer_ffmpeg': False,
-    'geo_bypass': True,
-    'outtmpl': '%(title)s.%(ext)s',
-    'quite': True
-}
 
 def time_to_seconds(time):
     stringt = str(time)
@@ -83,14 +75,3 @@ def song(client: Client, message: Message):
         os.remove(thumb_name)
     except Exception as e:
         print(e)
-
-
-SONG_HANDLER = DisableAbleCommandHandler("song", song)
-
-dispatcher.add_handler(SONG_HANDLER)
-
-__mod_name__ = "Song"
-
-_handlers_ = [
-SONG_HANDLER 
-]
