@@ -1,14 +1,8 @@
 import os
-import wget
-import time
-import yt_dlp
-import asyncio
-import aiohttp
 import requests
+import aiohttp
+import youtube_dl
 
-from pyrogram import Client
-from pyrogram.types import Message
-from yt_dlp import YoutubeDL
 from pyrogram import filters
 from EmiliaAnimeBot import pgram
 from youtube_search import YoutubeSearch
@@ -16,20 +10,15 @@ from EmiliaAnimeBot.pyroerror import capture_err
 from EmiliaAnimeBot.modules.disable import DisableAbleCommandHandler
 from EmiliaAnimeBot import dispatcher
 
-
-
 def time_to_seconds(time):
     stringt = str(time)
     return sum(int(x) * 60 ** i for i, x in enumerate(reversed(stringt.split(':'))))
 
 
 @pgram.on_message(filters.command(['song']))
-def song(client: Client, message: Message):
+def song(client, message):
 
-
-
-    user_id = message.from_user.first_name
-    chat_title = message.chat.title
+    user_id = message.from_user.id 
     user_name = message.from_user.first_name 
     rpk = "["+user_name+"](tg://user?id="+str(user_id)+")"
 
@@ -42,17 +31,22 @@ def song(client: Client, message: Message):
     try:
         results = YoutubeSearch(query, max_results=1).to_dict()
         link = f"https://youtube.com{results[0]['url_suffix']}"
+        #print(results)
         title = results[0]["title"][:40]       
         thumbnail = results[0]["thumbnails"][0]
         thumb_name = f'thumb{title}.jpg'
         thumb = requests.get(thumbnail, allow_redirects=True)
         open(thumb_name, 'wb').write(thumb.content)
+
+
         duration = results[0]["duration"]
         url_suffix = results[0]["url_suffix"]
         views = results[0]["views"]
 
     except Exception as e:
-        m.edit("✖️ Found Nothing. Sorry.\n\nTry another keywork or maybe spell it properly.")
+        m.edit(
+            "✖️ Found Nothing. Sorry.\n\nTry another keywork or maybe spell it properly."
+        )
         print(str(e))
         return
     m.edit("`📥 downloading file... `")
