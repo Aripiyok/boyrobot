@@ -63,7 +63,7 @@ Saya Memiliki Banyak Fitur Praktis
 ┣• Flood Control.
 ┣• Warning System.
 ┣• Predetermined Filters.
-┣• Gunakan Perintah » /help « untuk Fitur Lengkap saya
+┣• Gunakan Perintah » /help « Fitur Lengkap saya
 ┗━━━━━━━━━━━━━━
 ❃ Managed  By : @fl0werboy
 ❃ Thanks To : @mrismanaziz & @SharingUserbot Team 🔥
