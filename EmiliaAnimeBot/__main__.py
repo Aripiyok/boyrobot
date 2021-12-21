@@ -52,24 +52,15 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = f"""
-{BOT_NAME}[.]({EMILIA_START_IMG})
-•• Haii My Name is @boytapibot ••
-
-GUA HADIR UNTUK MELINDUNGI WANITA DARI COWO STRESS!
-━━━━━━━━━━━━━━━
-Bot untuk Mengelola Grup Anda dengan Simple dan Mudah!
-Saya Memiliki Banyak Fitur Praktis 
-┏━━━━━━━━━━━━━━
-┣• Flood Control.
-┣• Warning System.
-┣• Predetermined Filters.
-┣• Gunakan Perintah » /help « Fitur Lengkap saya
-┗━━━━━━━━━━━━━━
-❃ Managed  By : @fl0werboy
-❃ Thanks To : @mrismanaziz & @SharingUserbot Team 🔥
-━━━━━━━━━━━━━━━
-Ingin Menambahkan Saya ke Grup Anda? Cukup Klik Tombol di Bawah!
-{BOT_NAME}[.]({EMILIA_START_IMG})
+────「 [{}](https://telegra.ph/file/efed01577b8200e353b25.jpg) 」────
+*Hola! {},*
+*I am an Anime themed advance group management bot with a lot of Sexy Features.*
+➖➖➖➖➖➖➖➖➖➖➖➖➖
+• *Uptime:* `{}`
+• `{}` *users, across* `{}` *chats.*
+➖➖➖➖➖➖➖➖➖➖➖➖➖
+➛ Try The Help Buttons Below To Know My Abilities ××
+({EMILIA_START_IMG})
 
 """
 
