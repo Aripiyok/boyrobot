@@ -55,20 +55,19 @@ PM_START_TEXT = f"""
 •• Haii My Name is @boytapibot ••
 
 GUA HADIR UNTUK MELINDUNGI WANITA DARI COWO STRESS!
-━━━━━━━━━━━━━━━
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Bot untuk Mengelola Grup Anda dengan Simple dan Mudah!
 Saya Memiliki Banyak Fitur Praktis 
-┏━━━━━━━━━━━━━━
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ┣• Flood Control.
 ┣• Warning System.
 ┣• Predetermined Filters.
 ┣• Gunakan Perintah » /help « Fitur Lengkap saya
-┗━━━━━━━━━━━━━━
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 ❃ Managed  By : @fl0werboy
 ❃ Thanks To : @mrismanaziz & @SharingUserbot Team 🔥
-━━━━━━━━━━━━━━━
-Ingin Menambahkan Saya ke Grup Anda? Cukup Klik Tombol di Bawah!
-[.]({EMILIA_START_IMG})
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[Ingin Menambahkan Saya ke Grup Anda? Cukup Klik Tombol di Bawah!]({EMILIA_START_IMG})
 
 
 """
