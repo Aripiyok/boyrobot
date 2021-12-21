@@ -26,7 +26,7 @@ def afk(update: Update, context: CallbackContext):
 
     sql.set_afk(update.effective_user.id, reason)
     fname = update.effective_user.first_name
-    update.effective_message.reply_text("{} is now Busy With Their Partner!{}".format(
+    update.effective_message.reply_text("{} sok sibuk banget lo!{}".format(
         fname, notice))
 
 
@@ -45,9 +45,9 @@ def no_longer_afk(update: Update, context: CallbackContext):
         firstname = update.effective_user.first_name
         try:
             options = [
-                'Is that {}?', '{} is back!', '{} is now in the chat!',
-                '{} is awake!', '{} is back online!', '{} is finally here!',
-                'Welcome back! {}', 'Where is {}?\nIn the chat!'
+                'y balik lagi {}?', '{} dari mana aj!', '{} selamat datang kembali nyet!',
+                '{} udah ngebabunya!', '{} bocah sok sibuk nongol lgi!', '{} akhirnya nongol!',
+                'sokin lagi sini! {}', 'kemana aja lu {}?\nIn the chat!'
             ]
             chosen_option = random.choice(options)
             update.effective_message.reply_text(chosen_option.format(firstname))
