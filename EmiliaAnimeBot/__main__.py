@@ -54,7 +54,7 @@ def get_readable_time(seconds: int) -> str:
 PM_START_TEXT = f"""
 •• Haii My Name is @boytapibot ••
 
-GUA HADIR UNTUK MELINDUNGI WANITA DARI COWO STRESS!
+**__GUA HADIR UNTUK MELINDUNGI WANITA DARI COWO STRESS!__**
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Bot untuk Mengelola Grup Anda dengan Simple dan Mudah!
 Saya Memiliki Banyak Fitur Praktis 
