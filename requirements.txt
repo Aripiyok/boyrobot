@@ -75,3 +75,4 @@ python-arq
 heroku3
 aiofiles
 git+https://github.com/pyrogram/pyrogram@master
+nekos.py
