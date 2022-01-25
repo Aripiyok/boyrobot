@@ -38,7 +38,6 @@ alphabet_detector
 loguru
 pyrate-limiter
 gtts
-nekos.py
 fontTools
 typing
 tswift
